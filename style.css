@@ -1,0 +1,191 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(233, 233, 233);
+}
+
+
+.container{
+    width: 100%;
+    max-width: 100vh;
+    margin: auto;
+    padding: 50px;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.btn{
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;    
+}
+
+
+/* form style start */
+#task-form{
+    display: flex;
+    gap: 10px;    
+}
+h1{
+    text-align: center;
+}
+
+#task-input{
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Select style */
+#priority-select{
+    background-color: #e0dde2;
+    color: black;
+    height: 60px;
+    margin-top: 10px;
+    padding: 9px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Button style */
+.add-btn{
+    background-color: green;
+    color: white;
+
+    &:hover{
+        background-color: darkgreen;
+    }
+}
+
+button.edit{
+    background-color: #cf9713;
+    color: white;
+
+    &:hover{
+        background-color: #b18e3c;
+    }
+}
+
+button.delete{
+    background-color: #c82333;
+    color: white;
+
+    &:hover{
+        background-color: #9e2834;
+    }
+}
+button.completed{
+    background-color: green;
+    color: white;
+
+    &:hover{
+        background-color: darkgreen;
+    }
+}
+
+/* List style */
+
+#task-list{
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+
+li.task-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.task-item.low{
+    background: #88838A;
+    color: white;
+}
+.task-item.high{
+    background: #444245;
+    color: white;
+}
+.task-item.medium{
+    background: #666267;
+    color: white;
+}
+
+li.completed{
+   text-decoration: line-through;
+   opacity: 0.5;
+   color: gray;
+}
+
+/* form style end */
+
+
+/* Responsive için media query */
+@media (max-width:1200px) {
+    .container {
+        padding: 40px;
+        margin: 40px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        margin: 30px;
+    }
+    #task-form {
+        flex-direction: column;
+    }
+    #task-input,
+    #priority-select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container{
+        margin: 40px;
+    }
+    #task-form {
+        flex-direction: row;
+    }
+    h1 {
+        font-size: 1.5rem; 
+    }
+    #priority-select {
+        width: max-content;
+    }
+    .btn {
+        width: max-content; 
+        padding: 9px;
+    }
+    li.task-item {
+        flex-direction: column; 
+         
+    }
+    #task-input {
+        margin-bottom: 10px; 
+    }
+    #priority-select {
+        margin-bottom: 10px; 
+    }
+}
